@@ -11,5 +11,4 @@ DNDPillEnabler_FILES = Tweak.x
 DNDPillEnabler_CFLAGS = -fobjc-arc
 
 include $(THEOS_MAKE_PATH)/tweak.mk
-SUBPROJECTS += dndpillenablerpref
-#include $(THEOS_MAKE_PATH)/aggregate.mk
+include $(THEOS_MAKE_PATH)/aggregate.mk
