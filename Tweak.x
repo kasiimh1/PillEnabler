@@ -10,26 +10,24 @@ static BOOL setFloatingDockColour;
 	if (DNDEnabled) {
 			setStatusBarColour = YES;
 			setFloatingDockColour = YES;
-	} 
-	return %orig;
-}
-%end
-
-%hook UIStatusBar_Modern
--(void)layoutSubviews {
-	if(setStatusBarColour)
-	{
-		self.backgroundColor = [UIColor colorWithRed:0.53 green:0.38 blue:0.76 alpha:1.0];
+	}
+	else {
+		setStatusBarColour = NO;
+		setFloatingDockColour = NO;
 	}
 	return %orig;
 }
 %end
 
-%hook SBFloatingDockPlatterView
+%hook _UIStatusBar
 -(void)layoutSubviews {
-	if(setFloatingDockColour)
+	if(setStatusBarColour)
 	{
-		self.backgroundColor = [UIColor colorWithRed:0.29 green:0.21 blue:0.42 alpha:1.0];
+		self.backgroundColor = [UIColor colorWithRed:0.53 green:0.38 blue:0.76 alpha:1.0];
+	}
+	if(!setStatusBarColour) 
+	{
+		self.backgroundColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.0];
 	}
 	return %orig;
 }

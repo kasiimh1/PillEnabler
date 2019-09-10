@@ -1,8 +1,4 @@
-@interface UIStatusBar_Modern: UIColor 
-@property (nonatomic,copy,readwrite) UIColor * backgroundColor;
-@end
-
-@interface SBFloatingDockPlatterView: UIColor 
+@interface _UIStatusBar: UIColor 
 @property (nonatomic,copy,readwrite) UIColor * backgroundColor;
 @end
 
