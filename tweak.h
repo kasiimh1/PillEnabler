@@ -3,7 +3,7 @@
 @end
 
 @interface _UIStatusBarStringView: UIView
-
+@property (copy,readonly) NSString * description; 
 @end
 
 @interface _UIStatusBarTimeItem: _UIStatusBar
