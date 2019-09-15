@@ -1,9 +1,9 @@
 @interface _UIStatusBar: UIColor 
 @property (nonatomic,copy,readwrite) UIColor * backgroundColor;
+@property(class, nonatomic, readonly) UIColor *clearColor;
 @end
 
 @interface _UIStatusBarStringView: UIView
-@property (copy,readonly) NSString * description; 
 @end
 
 @interface _UIStatusBarTimeItem: _UIStatusBar
